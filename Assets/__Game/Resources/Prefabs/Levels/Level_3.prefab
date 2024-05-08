@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.55
       objectReference: {fileID: 0}
+    - target: {fileID: 3688607484703622301, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _maxTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_text
       value: "\u0411\u0430"

@@ -199,13 +199,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3688607484703622301, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _maxTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717960151745444760, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_text
-      value: "\u0410\u0431"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_fontSize
-      value: 0.75
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5383494424573651556, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: _tutorial

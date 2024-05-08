@@ -99,6 +99,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3688607484703622301, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _maxTime
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_text
       value: "\u041A\u0443"

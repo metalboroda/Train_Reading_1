@@ -23,13 +23,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.55
       objectReference: {fileID: 0}
+    - target: {fileID: 3688607484703622301, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _maxTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_text
-      value: "\u0411\u0430"
+      value: "\u0412\u0435\u0440"
       objectReference: {fileID: 0}
     - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_fontSize
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5383494424573651556, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: _answers.Array.data[0].<AnswerText>k__BackingField
@@ -379,11 +383,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7244740211624671601, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
       propertyPath: m_text
-      value: "\u043E\u0431"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7244740211624671601, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
       propertyPath: m_fontSize
-      value: 0.85
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244740211624671601, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7601842156953072861, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -391,7 +399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8024316329723704894, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
