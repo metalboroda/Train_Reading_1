@@ -81,13 +81,13 @@ namespace Assets.__Game.Resources.Scripts.Train
       if (trainMovementEvent.IsMoving == true) return;
 
       Vector3 startPosition = new Vector3(
-        _spawnedCartHandlers[0].transform.position.x + 0.75f,
-        _spawnedCartHandlers[0].transform.position.y + 0.75f, 0f);
+        _spawnedCartHandlers[_spawnedCartHandlers.Count - 1].transform.position.x + 0.75f,
+        _spawnedCartHandlers[_spawnedCartHandlers.Count - 1].transform.position.y + 0.75f, 0f);
 
       _spawnedTutorialFinger = Instantiate(
         _tutorialFinger, startPosition, Quaternion.identity);
 
-      _spawnedTutorialFinger.transform.DOMove(_variantBoard.GetLastVariantObjectTransform().position, 1.5f)
+      _spawnedTutorialFinger.transform.DOMove(_variantBoard.GetFirstVariantObjectTransform().position, 1.5f)
         .SetLoops(-1)
         .SetEase(Ease.InOutQuad);
     }

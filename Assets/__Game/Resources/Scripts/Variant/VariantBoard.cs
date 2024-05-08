@@ -152,6 +152,14 @@ namespace Assets.__Game.Resources.Scripts.Variant
       }
     }
 
+    public Transform GetFirstVariantObjectTransform()
+    {
+      if (_variantObjects != null && _variantObjects.Length > 0)
+        return _variantObjects[0].transform;
+
+      return null;
+    }
+
     public Transform GetLastVariantObjectTransform()
     {
       if (_variantObjects != null && _variantObjects.Length > 0)
