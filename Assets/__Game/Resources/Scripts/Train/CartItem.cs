@@ -6,6 +6,6 @@ namespace Assets.__Game.Resources.Scripts.Train
   [Serializable]
   public class CartItem
   {
-    [field: SerializeField] public Sprite AnswerSprite { get; private set; }
+    [field: SerializeField] public string AnswerText { get; private set; }
   }
 }

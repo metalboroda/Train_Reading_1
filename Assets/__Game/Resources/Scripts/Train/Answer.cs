@@ -1,15 +1,15 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 namespace Assets.__Game.Resources.Scripts.Train
 {
   public class Answer : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
   {
-    [SerializeField] public Image _image;
+    [SerializeField] public TextMeshProUGUI _textMesh;
 
-    public Sprite AnswerSprite { get; private set; }
+    public string AnswerText { get; private set; }
 
     private Vector3 _initLocalPosition;
     private Vector3 _offset;
@@ -37,10 +37,10 @@ namespace Assets.__Game.Resources.Scripts.Train
       }
     }
 
-    public void SetSpriteAndImage(Sprite sprite)
+    public void SetSpriteAndImage(string text)
     {
-      AnswerSprite = sprite;
-      _image.sprite = AnswerSprite;
+      AnswerText = text;
+      _textMesh.text = AnswerText;
     }
 
     public void OnPointerDown(PointerEventData eventData)

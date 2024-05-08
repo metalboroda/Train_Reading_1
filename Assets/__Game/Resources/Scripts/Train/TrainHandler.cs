@@ -70,7 +70,7 @@ namespace Assets.__Game.Resources.Scripts.Train
           _answerObject, spawnedCart.AnswerPlacePoint.position,
           spawnedCart.AnswerPlacePoint.rotation, spawnedCart.AnswerPlacePoint);
 
-        spawnedAnswer.SetSpriteAndImage(_answers[i].AnswerSprite);
+        spawnedAnswer.SetSpriteAndImage(_answers[i].AnswerText);
       }
     }
 

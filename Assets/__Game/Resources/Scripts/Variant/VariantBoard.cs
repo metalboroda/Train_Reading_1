@@ -82,13 +82,13 @@ namespace Assets.__Game.Resources.Scripts.Variant
 
     private void InitVariants()
     {
-      Sprite currentSprite = null;
+      string currentText = null;
 
       for (int i = 0; i < _variantItems.Length; i++)
       {
-        currentSprite = _variantItems[i].VariantSprite;
+        currentText = _variantItems[i].VariantText;
 
-        _variantObjects[i].SetSpriteAndImage(currentSprite, _variantItems[i].ShowSprite);
+        _variantObjects[i].SetSpriteAndImage(currentText, _variantItems[i].ShowText);
       }
 
       EventBus<EventStructs.VariantsAssignedEvent>.Raise(new EventStructs.VariantsAssignedEvent());
@@ -100,7 +100,7 @@ namespace Assets.__Game.Resources.Scripts.Variant
 
       foreach (VariantItem item in _variantItems)
       {
-        if (item.ShowSprite == false)
+        if (item.ShowText == false)
         {
           count++;
         }
@@ -116,6 +116,7 @@ namespace Assets.__Game.Resources.Scripts.Variant
       if (_correctAnswersCounter == _emptyVariantsCounter)
       {
         EventBus<EventStructs.WinEvent>.Raise(new EventStructs.WinEvent());
+        EventBus<EventStructs.LevelPointEvent>.Raise(new EventStructs.LevelPointEvent());
 
         StartCoroutine(DoChangeWinLoseGameStateWithDelay(true, 1.5f));
 

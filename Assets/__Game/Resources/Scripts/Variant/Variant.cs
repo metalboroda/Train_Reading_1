@@ -1,6 +1,7 @@
 using __Game.Resources.Scripts.EventBus;
 using Assets.__Game.Resources.Scripts.Train;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ namespace Assets.__Game.Resources.Scripts.Variant
 {
   public class Variant : MonoBehaviour
   {
-    [SerializeField] private Image _variantImage;
+    [SerializeField] private TextMeshProUGUI _variantTextMesh;
     [SerializeField] private GameObject _unknownTextObject;
     [Space]
     [SerializeField] private Color _transparentColor;
@@ -17,23 +18,23 @@ namespace Assets.__Game.Resources.Scripts.Variant
     [SerializeField] private GameObject _incorrectParticlesPrefab;
 
     public bool ShowSprite { get; private set; }
-    public Sprite VariantSprite { get; private set; }
-    public Sprite ReceivedAnswer { get; private set; }
+    public string VariantText { get; private set; }
+    public string ReceivedText { get; private set; }
 
-    public void SetSpriteAndImage(Sprite variantSprite, bool showSprite)
+    public void SetSpriteAndImage(string variantText, bool showSprite)
     {
-      _variantImage.sprite = null;
-      VariantSprite = variantSprite;
+      _variantTextMesh.text = null;
+      VariantText = variantText;
       ShowSprite = showSprite;
 
       if (showSprite == true)
       {
-        _variantImage.sprite = VariantSprite;
+        _variantTextMesh.text = VariantText;
         _unknownTextObject.SetActive(false);
       }
       else
       {
-        _variantImage.color = _transparentColor;
+        _variantTextMesh.color = _transparentColor;
         _unknownTextObject.SetActive(true);
       }
     }
@@ -49,13 +50,13 @@ namespace Assets.__Game.Resources.Scripts.Variant
         });
 
       ShowSprite = true;
-      ReceivedAnswer = answerToPlace.AnswerSprite;
+      ReceivedText = answerToPlace.AnswerText;
       _unknownTextObject.SetActive(false);
     }
 
     private void CheckForCorrectAnswer()
     {
-      if (VariantSprite == ReceivedAnswer)
+      if (VariantText == ReceivedText)
       {
         EventBus<EventStructs.CorrectAnswerEvent>.Raise(new EventStructs.CorrectAnswerEvent());
 
