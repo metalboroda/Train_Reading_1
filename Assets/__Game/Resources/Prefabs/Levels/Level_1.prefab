@@ -71,6 +71,22 @@ PrefabInstance:
       propertyPath: _answers.Array.data[3].<AnswerSprite>k__BackingField
       value: 
       objectReference: {fileID: 21300000, guid: 32464a27adf51e2469450cb26fe17659, type: 3}
+    - target: {fileID: 5383494424573651556, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _answers.Array.data[0].<AnserAudioCLip>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: b24c4dc4590dcd940b1b1ec4402ec315, type: 3}
+    - target: {fileID: 5383494424573651556, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _answers.Array.data[1].<AnserAudioCLip>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 88e66c06d06760444b853ded73b364c6, type: 3}
+    - target: {fileID: 5383494424573651556, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _answers.Array.data[2].<AnserAudioCLip>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d61f8269a82973439bf89350e12bf9b, type: 3}
+    - target: {fileID: 5383494424573651556, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _answers.Array.data[3].<AnserAudioCLip>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: b836db4b63c45874bb8665b3e0fbfea0, type: 3}
     - target: {fileID: 5602689102984901384, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -85,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 04619e420f0cff54e81d274501c5997b, type: 3}
     - target: {fileID: 8958000384104972398, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.35
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 8958000384104972399, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: _spacing
