@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d48be59c359dd419995faf45113337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _questAudio: {fileID: 0}
+  _questAudio: {fileID: 8300000, guid: 09b7199d3b9fd7842a3dfe1215beb282, type: 3}
   _winAnnouncerClips:
   - {fileID: 8300000, guid: 415019c34f4b59341994b0222e61ff03, type: 3}
   - {fileID: 8300000, guid: fc576c5bf8ff8ff48be18de5b3135c53, type: 3}
