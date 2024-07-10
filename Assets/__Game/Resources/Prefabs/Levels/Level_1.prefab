@@ -23,13 +23,17 @@ PrefabInstance:
       propertyPath: _maxTime
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4357531322481510734, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _levelWord
+      value: 
+      objectReference: {fileID: 8300000, guid: 29a3477861629c749a8b7893c56e86b1, type: 3}
     - target: {fileID: 5141630588745611643, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_text
-      value: "\u041A\u0443"
+      value: "\u041A\u0423"
       objectReference: {fileID: 0}
     - target: {fileID: 5381777621544629463, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: m_fontSize
@@ -107,6 +111,10 @@ PrefabInstance:
       propertyPath: _spacing
       value: 0.575
       objectReference: {fileID: 0}
+    - target: {fileID: 8958000384104972399, guid: a454cc821da5e1b419971d0230763865, type: 3}
+      propertyPath: _variantAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 29a3477861629c749a8b7893c56e86b1, type: 3}
     - target: {fileID: 8958000384104972399, guid: a454cc821da5e1b419971d0230763865, type: 3}
       propertyPath: _variantItems.Array.size
       value: 4
@@ -359,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7244740211624671601, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
       propertyPath: m_text
-      value: "\u043B\u044C"
+      value: "\u041B\u042C"
       objectReference: {fileID: 0}
     - target: {fileID: 7244740211624671601, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
       propertyPath: m_fontSize
@@ -539,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7244740211624671601, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
       propertyPath: m_text
-      value: "\u0431\u0430"
+      value: "\u0411\u0410"
       objectReference: {fileID: 0}
     - target: {fileID: 7244740211624671601, guid: 61707c48a037843479f8b1dc7399176f, type: 3}
       propertyPath: m_fontSize

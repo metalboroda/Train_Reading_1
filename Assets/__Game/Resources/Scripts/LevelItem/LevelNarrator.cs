@@ -20,6 +20,7 @@ namespace Assets.__Game.Resources.Scripts.LevelItem
 
     private EventBinding<EventStructs.StateChanged> _stateEvent;
     private EventBinding<EventStructs.StuporEvent> _stuporEvent;
+    private EventBinding<EventStructs.VariantAudioClickedEvent> _variantAudioClickedEvent;
 
     private void Awake() {
       _audioSource = GetComponent<AudioSource>();
@@ -30,11 +31,13 @@ namespace Assets.__Game.Resources.Scripts.LevelItem
     private void OnEnable() {
       _stateEvent = new EventBinding<EventStructs.StateChanged>(PlayScreenSound);
       _stuporEvent = new EventBinding<EventStructs.StuporEvent>(PlayStuporSound);
+      _variantAudioClickedEvent = new EventBinding<EventStructs.VariantAudioClickedEvent>(VariantAudio);
     }
 
     private void OnDisable() {
       _stateEvent.Remove(PlayScreenSound);
       _stuporEvent.Remove(PlayStuporSound);
+      _variantAudioClickedEvent.Remove(VariantAudio);
     }
 
     private void Start() {
@@ -63,6 +66,11 @@ namespace Assets.__Game.Resources.Scripts.LevelItem
     private void PlayStuporSound(EventStructs.StuporEvent stuporEvent) {
       _audioSource.Stop();
       _audioSource.PlayOneShot(_audioTool.GetRandomCLip(_stuporAnnouncerClips));
+    }
+
+    private void VariantAudio(EventStructs.VariantAudioClickedEvent variantAudioClickedEvent) {
+      _audioSource.Stop();
+      _audioSource.PlayOneShot(variantAudioClickedEvent.Clip);
     }
   }
 }
