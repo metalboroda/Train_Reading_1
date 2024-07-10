@@ -9,6 +9,7 @@ namespace Assets.__Game.Resources.Scripts.LevelItem
   {
     [Header("Announcer")]
     [SerializeField] private AudioClip _questAudio;
+    [SerializeField] private AudioClip _levelWord;
     [SerializeField] private AudioClip[] _winAnnouncerClips;
     [SerializeField] private AudioClip[] _loseAnnouncerClips;
     [SerializeField] private AudioClip[] _stuporAnnouncerClips;
@@ -20,34 +21,34 @@ namespace Assets.__Game.Resources.Scripts.LevelItem
     private EventBinding<EventStructs.StateChanged> _stateEvent;
     private EventBinding<EventStructs.StuporEvent> _stuporEvent;
 
-    private void Awake()
-    {
+    private void Awake() {
       _audioSource = GetComponent<AudioSource>();
 
       _audioTool = new AudioTool(_audioSource);
     }
 
-    private void OnEnable()
-    {
+    private void OnEnable() {
       _stateEvent = new EventBinding<EventStructs.StateChanged>(PlayScreenSound);
       _stuporEvent = new EventBinding<EventStructs.StuporEvent>(PlayStuporSound);
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
       _stateEvent.Remove(PlayScreenSound);
       _stuporEvent.Remove(PlayStuporSound);
     }
 
-    private void Start()
-    {
+    private void Start() {
       _audioSource.PlayOneShot(_questAudio);
     }
 
-    private void PlayScreenSound(EventStructs.StateChanged state)
-    {
-      switch (state.State)
-      {
+    private void PlayScreenSound(EventStructs.StateChanged state) {
+      switch (state.State) {
+        case GameplayState:
+          if (_levelWord != null) {
+            _audioSource.Stop();
+            _audioSource.PlayOneShot(_levelWord);
+          }
+          break;
         case GameWinState:
           _audioSource.Stop();
           _audioSource.PlayOneShot(_audioTool.GetRandomCLip(_winAnnouncerClips));
@@ -59,8 +60,7 @@ namespace Assets.__Game.Resources.Scripts.LevelItem
       }
     }
 
-    private void PlayStuporSound(EventStructs.StuporEvent stuporEvent)
-    {
+    private void PlayStuporSound(EventStructs.StuporEvent stuporEvent) {
       _audioSource.Stop();
       _audioSource.PlayOneShot(_audioTool.GetRandomCLip(_stuporAnnouncerClips));
     }
